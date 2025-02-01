@@ -39,6 +39,7 @@
           "title": "Id - Master Data",
           "type": "array",
           "additionalItems": true,
+          "test":true,
           "items": {
             "type": "string"
           }
