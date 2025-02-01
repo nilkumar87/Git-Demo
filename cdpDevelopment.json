@@ -1,0 +1,1893 @@
+{
+  "profileSchema": {
+    "name": "Profile",
+    "description": "Profile",
+    "containerSchemaId": null,
+    "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "primaryEmail": {
+          "scopes": [],
+          "type": "string"
+        },
+        "primaryPhone": {
+          "type": "string"
+        },
+        "imageURL": {
+          "title": "Image URL",
+          "description": "URL for the customer's profile image",
+          "type": "string"
+        },
+        "masterDataId": {
+          "type": "array",
+          "additionalItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "crmId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deviceId": {
+          "title": "Device ID",
+          "description": "Unique identifier of the customer's device",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ciamId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "emails": {
+          "type": "array",
+          "additionalItems": true,
+          "items": {
+            "type": "string"
+          }
+        },
+        "phones": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "insuranceProvider": {
+          "title": "Insurance Provider",
+          "description": "Insurance Provider",
+          "type": "string"
+        },
+        "coverageLimit": {
+          "title": "Coverage Limit",
+          "description": "Coverage Limit ",
+          "type": "number"
+        },
+        "EmailOptIn": {
+          "type": "boolean"
+        },
+        "familyID": {
+          "title": "FamilyID",
+          "description": "FamilyID",
+          "type": "string"
+        },
+        "familyRole": {
+          "title": "familyRole",
+          "description": "familyRole",
+          "type": "string"
+        },
+        "cookieID": {
+          "type": "string"
+        },
+        "dob": {
+          "scopes": [],
+          "type": "string",
+          "format": "date-time"
+        },
+        "Age": {
+          "widget": {
+            "uiWidgets": [
+              {
+                "type": "distribution"
+              }
+            ]
+          },
+          "definitionType": {
+            "$ref": "#/definition/age"
+          },
+          "type": "integer"
+        }
+      }
+    },
+    "Schema": "{  \"$schema\": \"http://json-schema.org/draft-07/schema#\",  \"type\": \"object\",  \"properties\": {    \"firstName\": {      \"type\": \"string\"    },    \"lastName\": {      \"type\": \"string\"    },    \"primaryEmail\": {      \"scopes\": [],      \"type\": \"string\"    },    \"primaryPhone\": {      \"type\": \"string\"    },    \"imageURL\": {      \"title\": \"Image URL\",      \"description\": \"URL for the customer's profile image\",      \"type\": \"string\"    },    \"masterDataId\": {      \"type\": \"array\",      \"additionalItems\": true,      \"items\": {        \"type\": \"string\"      }    },    \"crmId\": {      \"type\": \"array\",      \"items\": {        \"type\": \"string\"      }    },    \"deviceId\": {      \"title\": \"Device ID\",      \"description\": \"Unique identifier of the customer's device\",      \"type\": \"array\",      \"items\": {        \"type\": \"string\"      }    },    \"ciamId\": {      \"type\": \"array\",      \"items\": {        \"type\": \"string\"      }    },    \"emails\": {      \"type\": \"array\",      \"additionalItems\": true,      \"items\": {        \"type\": \"string\"      }    },    \"phones\": {      \"type\": \"array\",      \"items\": {        \"type\": \"string\"      }    },    \"insuranceProvider\": {      \"title\": \"Insurance Provider\",      \"description\": \"Insurance Provider\",      \"type\": \"string\"    },    \"coverageLimit\": {      \"title\": \"Coverage Limit\",      \"description\": \"Coverage Limit \",      \"type\": \"number\"    },    \"EmailOptIn\": {      \"type\": \"boolean\"    },    \"familyID\": {      \"title\": \"FamilyID\",      \"description\": \"FamilyID\",      \"type\": \"string\"    },    \"familyRole\": {      \"title\": \"familyRole\",      \"description\": \"familyRole\",      \"type\": \"string\"    },    \"cookieID\": {      \"type\": \"string\"    },    \"dob\": {      \"scopes\": [],      \"type\": \"string\",      \"format\": \"date-time\"    },    \"Age\": {      \"widget\": {        \"uiWidgets\": [          {            \"type\": \"distribution\"          }        ]      },      \"definitionType\": {        \"$ref\": \"#/definition/age\"      },      \"type\": \"integer\"    }  }}",
+    "schemaType": 0,
+    "default": true,
+    "CanDelete": false,
+    "CanRename": false
+  },
+  "mergeRules": [
+    {
+      "name": "Profile",
+      "viewId": "Contextual Profile",
+      "mergeRulesNamesToConfigs": {
+        "masterDataId": {
+          "name": "masterDataId",
+          "isProtected": true,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "crmId": {
+          "name": "crmId",
+          "isProtected": true,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "ciamId": {
+          "name": "ciamId",
+          "isProtected": true,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "deviceId": {
+          "name": "deviceId",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "insuranceProvider": {
+          "name": "insuranceProvider",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "primaryEmail": {
+          "name": "primaryEmail",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "primaryPhone": {
+          "name": "primaryPhone",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "coverageLimit": {
+          "name": "coverageLimit",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "EmailOptIn": {
+          "name": "EmailOptIn",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "familyID": {
+          "name": "familyID",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "familyRole": {
+          "name": "familyRole",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "cookieID": {
+          "name": "cookieID",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "dob": {
+          "name": "dob",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "emails": {
+          "name": "emails",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "Age": {
+          "name": "Age",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        }
+      }
+    },
+    {
+      "name": "Profile",
+      "viewId": "Unified Customer Profile",
+      "mergeRulesNamesToConfigs": {
+        "masterDataId": {
+          "name": "masterDataId",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "crmId": {
+          "name": "crmId",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "ciamId": {
+          "name": "ciamId",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "deviceId": {
+          "name": "deviceId",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "insuranceProvider": {
+          "name": "insuranceProvider",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "primaryEmail": {
+          "name": "primaryEmail",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "primaryPhone": {
+          "name": "primaryPhone",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "coverageLimit": {
+          "name": "coverageLimit",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "EmailOptIn": {
+          "name": "EmailOptIn",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "familyID": {
+          "name": "familyID",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "familyRole": {
+          "name": "familyRole",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "cookieID": {
+          "name": "cookieID",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "dob": {
+          "name": "dob",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "Age": {
+          "name": "Age",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        }
+      }
+    }
+  ],
+  "groupMergeRules": [
+    {
+      "name": "Family",
+      "schemaName": "Family",
+      "mergeRulesNamesToConfigs": {
+        "accountName": {
+          "name": "accountName",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "accountID": {
+          "name": "accountID",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "id": {
+          "name": "id",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        }
+      }
+    },
+    {
+      "name": "Vehicle",
+      "schemaName": "Vehicle",
+      "mergeRulesNamesToConfigs": {
+        "purchaseDate": {
+          "name": "purchaseDate",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "accountID": {
+          "name": "accountID",
+          "isProtected": false,
+          "writePolicy": "immutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "accountName": {
+          "name": "accountName",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "model": {
+          "name": "model",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "lastMilometerReading": {
+          "name": "lastMilometerReading",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "milometerUnit": {
+          "name": "milometerUnit",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "masterId": {
+          "name": "masterId",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        }
+      }
+    },
+    {
+      "name": "Group1",
+      "schemaName": "Group1",
+      "mergeRulesNamesToConfigs": {
+        "accountName": {
+          "name": "accountName",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "accountID": {
+          "name": "accountID",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        }
+      }
+    },
+    {
+      "name": "Group2",
+      "schemaName": "Group2",
+      "mergeRulesNamesToConfigs": {
+        "accountName": {
+          "name": "accountName",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        },
+        "accountID": {
+          "name": "accountID",
+          "isProtected": false,
+          "writePolicy": "mutable",
+          "maxValues": 1,
+          "writeConflictRule": "createUcp",
+          "dataQualityRanks": null
+        }
+      }
+    }
+  ],
+  "activities": [
+    {
+      "name": "Orders",
+      "description": "Orders",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "currency": {
+              "type": "string"
+            },
+            "amount": {
+              "scopes": [],
+              "type": "number"
+            },
+            "tax": {
+              "type": "number"
+            },
+            "id": {
+              "type": "string"
+            },
+            "amountSaved": {
+              "title": "Amount Saved",
+              "description": "Amount Saved",
+              "type": "number"
+            },
+            "productCategory": {
+              "title": "productCategory",
+              "description": "productCategory",
+              "type": "string"
+            },
+            "productCategory2": {
+              "title": "productCategory2",
+              "description": "productCategory2",
+              "type": "string"
+            },
+            "productID": {
+              "title": "productID",
+              "description": "productID",
+              "type": "string"
+            },
+            "productDescr": {
+              "title": "productDescr",
+              "description": "productDescr",
+              "type": "string"
+            },
+            "quantity": {
+              "title": "quantity",
+              "description": "quantity",
+              "type": "number"
+            },
+            "brand": {
+              "title": "brand",
+              "description": "brand",
+              "type": "string"
+            },
+            "orderDate": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "Schema": "{  \"$schema\": \"http://json-schema.org/draft-07/schema#\",  \"type\": \"array\",  \"items\": {    \"type\": \"object\",    \"properties\": {      \"currency\": {        \"type\": \"string\"      },      \"amount\": {        \"scopes\": [],        \"type\": \"number\"      },      \"tax\": {        \"type\": \"number\"      },      \"id\": {        \"type\": \"string\"      },      \"amountSaved\": {        \"title\": \"Amount Saved\",        \"description\": \"Amount Saved\",        \"type\": \"number\"      },      \"productCategory\": {        \"title\": \"productCategory\",        \"description\": \"productCategory\",        \"type\": \"string\"      },      \"productCategory2\": {        \"title\": \"productCategory2\",        \"description\": \"productCategory2\",        \"type\": \"string\"      },      \"productID\": {        \"title\": \"productID\",        \"description\": \"productID\",        \"type\": \"string\"      },      \"productDescr\": {        \"title\": \"productDescr\",        \"description\": \"productDescr\",        \"type\": \"string\"      },      \"quantity\": {        \"title\": \"quantity\",        \"description\": \"quantity\",        \"type\": \"number\"      },      \"brand\": {        \"title\": \"brand\",        \"description\": \"brand\",        \"type\": \"string\"      },      \"orderDate\": {        \"type\": \"string\",        \"format\": \"date-time\"      }    }  }}",
+      "schemaType": 1,
+      "default": true,
+      "CanDelete": false,
+      "CanRename": false
+    },
+    {
+      "name": "WebSurfingActivity",
+      "description": "",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "productCategory": {
+              "title": "productCategory",
+              "type": "string"
+            },
+            "brand": {
+              "type": "string"
+            },
+            "productcategory1": {
+              "type": "string"
+            },
+            "product": {
+              "type": "string"
+            },
+            "productDescription": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Schema": "{  \"type\": \"array\",  \"items\": {    \"type\": \"object\",    \"properties\": {      \"id\": {        \"type\": \"string\"      },      \"productCategory\": {        \"title\": \"productCategory\",        \"type\": \"string\"      },      \"brand\": {        \"type\": \"string\"      },      \"productcategory1\": {        \"type\": \"string\"      },      \"product\": {        \"type\": \"string\"      },      \"productDescription\": {        \"type\": \"string\"      }    }  }}",
+      "schemaType": 1,
+      "default": false,
+      "CanDelete": true,
+      "CanRename": true,
+      "isMutable": true
+    },
+    {
+      "name": "Maintenance Service Order",
+      "description": "",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "VIN": {
+              "type": "string"
+            },
+            "milometerReading": {
+              "title": "Milometer Reading ",
+              "type": "number"
+            },
+            "createdDate": {
+              "title": "Created Date",
+              "type": "string",
+              "format": "date-time"
+            },
+            "totalCost": {
+              "title": "Total Cost of Service",
+              "description": "Total Cost of Service",
+              "type": "number"
+            },
+            "hasCoverage": {
+              "scopes": [],
+              "type": "boolean"
+            },
+            "amountPaidByCustomer": {
+              "title": "Total Amount Paid By Customer",
+              "type": "number"
+            }
+          }
+        }
+      },
+      "Schema": "{  \"type\": \"array\",  \"items\": {    \"type\": \"object\",    \"properties\": {      \"id\": {        \"type\": \"string\"      },      \"currency\": {        \"type\": \"string\"      },      \"VIN\": {        \"type\": \"string\"      },      \"milometerReading\": {        \"title\": \"Milometer Reading \",        \"type\": \"number\"      },      \"createdDate\": {        \"title\": \"Created Date\",        \"type\": \"string\",        \"format\": \"date-time\"      },      \"totalCost\": {        \"title\": \"Total Cost of Service\",        \"description\": \"Total Cost of Service\",        \"type\": \"number\"      },      \"hasCoverage\": {        \"scopes\": [],        \"type\": \"boolean\"      },      \"amountPaidByCustomer\": {        \"title\": \"Total Amount Paid By Customer\",        \"type\": \"number\"      }    }  }}",
+      "schemaType": 1,
+      "default": false,
+      "CanDelete": true,
+      "CanRename": true,
+      "isMutable": true
+    }
+  ],
+  "activityIndicators": [
+    {
+      "name": "Total Orders",
+      "description": "Number of Orders",
+      "id": "HOqzHyhtBm-KJn-zl1RyyQ",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": true,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "count"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "Total Spend",
+      "description": "Sum of orders amount",
+      "id": "HD2k4gbkVasJc6a-DQykfw",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": true,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "sum",
+        "field": "amount"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "NumHighValBrandPur",
+      "description": "Number of High Value Brand Purchase",
+      "id": "HO7jacxyEw8qj7AvwbXlmw",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "count"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": {
+        "conditions": [
+          {
+            "field": "brand",
+            "condition": {
+              "operator": "equal",
+              "operand": {
+                "type": "string",
+                "value": "Akoni"
+              },
+              "isCaseSensitive": true
+            }
+          },
+          {
+            "field": "brand",
+            "condition": {
+              "operator": "equal",
+              "operand": {
+                "type": "string",
+                "value": "Cartier"
+              },
+              "isCaseSensitive": true
+            }
+          }
+        ],
+        "operator": "or"
+      }
+    },
+    {
+      "name": "LastOrder",
+      "description": "LastOrder",
+      "id": "HEKTjIa6GioEFsf0uwMrkw",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "count"
+      },
+      "dateRange": {
+        "method": "withInTheLast",
+        "range": 180,
+        "rangeEnd": 120,
+        "type": "days"
+      },
+      "condition": {
+        "conditions": [
+          {
+            "field": "orderDate",
+            "condition": {
+              "type": "date",
+              "operator": "after",
+              "operand": {
+                "type": "date",
+                "value": "2022-06-21T20:30:00+02:00",
+                "number": 0
+              }
+            }
+          },
+          {
+            "field": "orderDate",
+            "condition": {
+              "type": "date",
+              "operator": "before",
+              "operand": {
+                "type": "date",
+                "value": "2022-06-23T20:30:00+02:00",
+                "number": 0
+              }
+            }
+          }
+        ],
+        "operator": "and"
+      }
+    },
+    {
+      "name": "Total WebSurfingActivity",
+      "description": "Number of WebSurfingActivity",
+      "id": "HKShtN6WMt54TmRAz1uZEg",
+      "schemaId": "WebSurfingActivity",
+      "schemaName": "WebSurfingActivity",
+      "isProtected": true,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "count"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "NumSUVSurfing",
+      "description": "Number of time SUV related items are check",
+      "id": "HCMZ6j-Vots_GVxBWQ-8cA",
+      "schemaId": "WebSurfingActivity",
+      "schemaName": "WebSurfingActivity",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "count"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": {
+        "field": "productcategory1",
+        "condition": {
+          "operator": "equal",
+          "operand": {
+            "type": "string",
+            "value": "SUV"
+          },
+          "isCaseSensitive": true
+        }
+      }
+    },
+    {
+      "name": "Total Maintenance Service Order",
+      "description": "Number of Maintenance Service Order",
+      "id": "HCtzwgMSz3rPCW1gAxFBHQ",
+      "schemaId": "Maintenance Service Order",
+      "schemaName": "Maintenance Service Order",
+      "isProtected": true,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "count"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "TotalServiceCost",
+      "description": "Total Amount spent in Servicing without any Coverage",
+      "id": "HMAxK8vCRbrST2Y0EvSCtw",
+      "schemaId": "Maintenance Service Order",
+      "schemaName": "Maintenance Service Order",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "sum",
+        "field": "amountPaidByCustomer"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": {
+        "field": "hasCoverage",
+        "condition": {
+          "operator": "equal",
+          "operand": {
+            "type": "boolean",
+            "value": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Quantity",
+      "description": "Quantity",
+      "id": "HEd_LopOJos_EPuR8DN-xA",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "lastNumber",
+        "field": "quantity"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "TotalTax",
+      "description": "Total Tax",
+      "id": "HKyRhrS0YAD9zDYu98F_0w",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "sum",
+        "field": "tax"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "dateIndicator",
+      "description": "Date Indicator",
+      "id": "HH0Jzl1BMZG8fqCRpfPoLg",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "firstDate",
+        "field": "orderDate"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    },
+    {
+      "name": "OrderBrand",
+      "description": "OrderBarnd",
+      "id": "HP-uBXDG_t7gg2qMI_synA",
+      "schemaId": "Orders",
+      "schemaName": "Orders",
+      "isProtected": false,
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "status": "ready",
+      "property": null,
+      "calculationMethod": {
+        "method": "lastString",
+        "field": "brand"
+      },
+      "dateRange": {
+        "method": "allTime"
+      },
+      "condition": null
+    }
+  ],
+  "segments": [
+    {
+      "name": "CoverageLimit",
+      "description": "Coverage Limit",
+      "id": "HA1q_VqZuzkP2Ai7I7psDg",
+      "updated": "2022-06-22T13:01:12.0875458+02:00",
+      "created": "2022-06-22T13:01:12.0875458+02:00",
+      "schemaName": "Profile",
+      "isPredictionBased": false,
+      "isActivityBased": false,
+      "enabled": true,
+      "values": [
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "operand": {
+                "type": "double",
+                "value": 50000
+              },
+              "operator": "greaterThan"
+            },
+            "calculatedField": {
+              "field": "coverageLimit",
+              "type": "profile"
+            }
+          },
+          "value": "HighCoverageLimit"
+        },
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "conditions": [
+                {
+                  "operand": {
+                    "type": "double",
+                    "value": 50000
+                  },
+                  "operator": "lessThanOrEqual"
+                },
+                {
+                  "operand": {
+                    "type": "double",
+                    "value": 10000
+                  },
+                  "operator": "greaterThan"
+                }
+              ],
+              "operator": "and"
+            },
+            "calculatedField": {
+              "field": "coverageLimit",
+              "type": "profile"
+            }
+          },
+          "value": "MediumCoverageLimit"
+        },
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "operand": {
+                "type": "double",
+                "value": 10000
+              },
+              "operator": "lessThanOrEqual"
+            },
+            "calculatedField": {
+              "field": "coverageLimit",
+              "type": "profile"
+            }
+          },
+          "value": "LowCoverageValue"
+        }
+      ]
+    },
+    {
+      "name": "CustomerVal",
+      "description": "Customer value",
+      "id": "HIEZMXF8F3qRrvm7RpiIow",
+      "updated": "2022-06-30T03:04:28.1054499+02:00",
+      "created": "0001-01-01T00:00:00",
+      "schemaName": "Profile",
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "values": [
+        {
+          "condition": {
+            "conditions": [
+              {
+                "type": "calculatedField",
+                "condition": {
+                  "operand": {
+                    "type": "double",
+                    "value": 100000
+                  },
+                  "operator": "greaterThan"
+                },
+                "calculatedField": {
+                  "field": "Total Spend",
+                  "type": "activityIndicator"
+                }
+              },
+              {
+                "type": "calculatedField",
+                "condition": {
+                  "operand": {
+                    "type": "double",
+                    "value": 1
+                  },
+                  "operator": "greaterThanOrEqual"
+                },
+                "calculatedField": {
+                  "field": "NumHighValBrandPur",
+                  "type": "activityIndicator"
+                }
+              }
+            ],
+            "operator": "or"
+          },
+          "value": "HighValueCustomer"
+        },
+        {
+          "condition": {
+            "conditions": [
+              {
+                "type": "calculatedField",
+                "condition": {
+                  "operand": {
+                    "type": "double",
+                    "value": 100000
+                  },
+                  "operator": "lessThanOrEqual"
+                },
+                "calculatedField": {
+                  "field": "Total Spend",
+                  "type": "activityIndicator"
+                }
+              },
+              {
+                "type": "calculatedField",
+                "condition": {
+                  "operand": {
+                    "type": "double",
+                    "value": 10
+                  },
+                  "operator": "greaterThanOrEqual"
+                },
+                "calculatedField": {
+                  "field": "Total Orders",
+                  "type": "activityIndicator"
+                }
+              }
+            ],
+            "operator": "or"
+          },
+          "value": "MediumSegmentCustomer"
+        }
+      ]
+    },
+    {
+      "name": "Insurer",
+      "description": "By Insurer",
+      "id": "HDIuTYn1gWl6WlTqEhgqvA",
+      "updated": "2022-06-30T14:12:50.3076254+02:00",
+      "created": "0001-01-01T00:00:00",
+      "schemaName": "Profile",
+      "isPredictionBased": false,
+      "isActivityBased": false,
+      "enabled": false,
+      "values": [
+        {
+          "condition": {
+            "type": "profile",
+            "fieldCondition": {
+              "field": "insuranceProvider",
+              "condition": {
+                "operator": "equal",
+                "operand": {
+                  "type": "string",
+                  "value": "AXA Gulf Insurance"
+                },
+                "isCaseSensitive": true
+              }
+            }
+          },
+          "value": "AXA Gulf Insurance"
+        },
+        {
+          "condition": {
+            "type": "profile",
+            "fieldCondition": {
+              "field": "insuranceProvider",
+              "condition": {
+                "operator": "equal",
+                "operand": {
+                  "type": "string",
+                  "value": " Emirates Insurance Company"
+                },
+                "isCaseSensitive": true
+              }
+            }
+          },
+          "value": "Emirates Insurance Company"
+        },
+        {
+          "condition": {
+            "operator": "not",
+            "condition": {
+              "type": "profile",
+              "fieldCondition": {
+                "field": "insuranceProvider",
+                "condition": {
+                  "conditions": [
+                    {
+                      "operator": "equal",
+                      "operand": {
+                        "type": "string",
+                        "value": "Emirates Insurance Company"
+                      },
+                      "isCaseSensitive": true
+                    },
+                    {
+                      "operator": "equal",
+                      "operand": {
+                        "type": "string",
+                        "value": "AXA Gulf Insurance"
+                      },
+                      "isCaseSensitive": true
+                    }
+                  ],
+                  "operator": "or"
+                }
+              }
+            }
+          },
+          "value": "Others"
+        }
+      ]
+    },
+    {
+      "name": "CarIntrestSegment",
+      "description": "Car Intrest Segment",
+      "id": "HJuAxeCCJ7mbDPeC1CyhbA",
+      "updated": "2022-06-30T15:39:03.3290343+02:00",
+      "created": "0001-01-01T00:00:00",
+      "schemaName": "Profile",
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "values": [
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "operand": {
+                "type": "double",
+                "value": 2
+              },
+              "operator": "greaterThanOrEqual"
+            },
+            "calculatedField": {
+              "field": "NumSUVSurfing",
+              "type": "activityIndicator"
+            }
+          },
+          "value": "SUV"
+        }
+      ]
+    }
+  ],
+  "groupSegments": [
+    {
+      "name": "MaintenaceCost",
+      "description": "Maintenance Cost  of Vehicle",
+      "id": "HKq3ZIV_2p0GlSN-vMav4Q",
+      "updated": "2022-07-01T14:38:01.9141821+02:00",
+      "created": "0001-01-01T00:00:00",
+      "schemaName": "Vehicle",
+      "isPredictionBased": false,
+      "isActivityBased": true,
+      "enabled": true,
+      "values": [
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "operand": {
+                "type": "double",
+                "value": 1000
+              },
+              "operator": "greaterThan"
+            },
+            "calculatedField": {
+              "field": "TotalServiceCost",
+              "type": "activityIndicator"
+            }
+          },
+          "value": "High Maintenance Cost"
+        },
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "conditions": [
+                {
+                  "operand": {
+                    "type": "double",
+                    "value": 1000
+                  },
+                  "operator": "lessThanOrEqual"
+                },
+                {
+                  "operand": {
+                    "type": "double",
+                    "value": 200
+                  },
+                  "operator": "greaterThan"
+                }
+              ],
+              "operator": "and"
+            },
+            "calculatedField": {
+              "field": "TotalServiceCost",
+              "type": "activityIndicator"
+            }
+          },
+          "value": "Medium Maintenance Cost"
+        },
+        {
+          "condition": {
+            "type": "calculatedField",
+            "condition": {
+              "conditions": [
+                {
+                  "operand": {
+                    "type": "double",
+                    "value": 200
+                  },
+                  "operator": "lessThanOrEqual"
+                },
+                {
+                  "operand": {
+                    "type": "double",
+                    "value": 1
+                  },
+                  "operator": "greaterThan"
+                }
+              ],
+              "operator": "and"
+            },
+            "calculatedField": {
+              "field": "TotalServiceCost",
+              "type": "activityIndicator"
+            }
+          },
+          "value": "Low Maintenance Cost"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "name": "Family",
+      "description": "",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "type": "string"
+          },
+          "accountID": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "Schema": "{  \"type\": \"object\",  \"properties\": {    \"accountName\": {      \"type\": \"string\"    },    \"accountID\": {      \"type\": \"string\"    },    \"id\": {      \"type\": \"string\"    }  }}",
+      "schemaType": 5,
+      "default": false,
+      "CanDelete": true,
+      "CanRename": true
+    },
+    {
+      "name": "Vehicle",
+      "description": "",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "title": "Vehicle Description",
+            "type": "string"
+          },
+          "accountID": {
+            "title": "VIN",
+            "description": "VIN",
+            "type": "string"
+          },
+          "purchaseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "model": {
+            "title": "Model",
+            "type": "string"
+          },
+          "lastMilometerReading": {
+            "title": "Last Milometer Reading",
+            "type": "number"
+          },
+          "milometerUnit": {
+            "type": "string"
+          },
+          "masterId": {
+            "type": "string"
+          }
+        }
+      },
+      "Schema": "{  \"type\": \"object\",  \"properties\": {    \"accountName\": {      \"title\": \"Vehicle Description\",      \"type\": \"string\"    },    \"accountID\": {      \"title\": \"VIN\",      \"description\": \"VIN\",      \"type\": \"string\"    },    \"purchaseDate\": {      \"type\": \"string\",      \"format\": \"date-time\"    },    \"model\": {      \"title\": \"Model\",      \"type\": \"string\"    },    \"lastMilometerReading\": {      \"title\": \"Last Milometer Reading\",      \"type\": \"number\"    },    \"milometerUnit\": {      \"type\": \"string\"    },    \"masterId\": {      \"type\": \"string\"    }  }}",
+      "schemaType": 5,
+      "default": false,
+      "CanDelete": true,
+      "CanRename": true
+    },
+    {
+      "name": "Group1",
+      "description": "Testing Group Relationship",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "title": "Group Description",
+            "type": "string"
+          },
+          "accountID": {
+            "title": "GroupId",
+            "type": "string"
+          }
+        }
+      },
+      "Schema": "{  \"type\": \"object\",  \"properties\": {    \"accountName\": {      \"title\": \"Group Description\",      \"type\": \"string\"    },    \"accountID\": {      \"title\": \"GroupId\",      \"type\": \"string\"    }  }}",
+      "schemaType": 5,
+      "default": false,
+      "CanDelete": true,
+      "CanRename": true
+    },
+    {
+      "name": "Group2",
+      "description": "Test Relationship between two groups",
+      "containerSchemaId": null,
+      "relationId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "accountName": {
+            "title": "group description2",
+            "type": "string"
+          },
+          "accountID": {
+            "title": "group Id2",
+            "type": "string"
+          }
+        }
+      },
+      "Schema": "{  \"type\": \"object\",  \"properties\": {    \"accountName\": {      \"title\": \"group description2\",      \"type\": \"string\"    },    \"accountID\": {      \"title\": \"group Id2\",      \"type\": \"string\"    }  }}",
+      "schemaType": 5,
+      "default": false,
+      "CanDelete": true,
+      "CanRename": true
+    }
+  ],
+  "relationships": [
+    {
+      "name": "Family Relationship",
+      "parentSchemaId": "Family",
+      "childSchemaId": "Profile",
+      "relationId": null,
+      "schemaType": 6,
+      "schema": "{\r\n  \"type\": \"object\",\r\n  \"properties\": {\r\n    \"familyID\": {\r\n      \"title\": \"familyID\",\r\n      \"description\": \"familyID\",\r\n      \"type\": \"string\"\r\n    },\r\n    \"role\": {\r\n      \"title\": \"Role\",\r\n      \"description\": \"Role\",\r\n      \"type\": \"string\"\r\n    },\r\n    \"removed\": {\r\n      \"type\": \"boolean\"\r\n    }\r\n  }\r\n}",
+      "mappings": null
+    },
+    {
+      "name": "Vehicle Relationship",
+      "parentSchemaId": "Vehicle",
+      "childSchemaId": "Profile",
+      "relationId": null,
+      "schemaType": 6,
+      "schema": "{\r\n  \"type\": \"object\",\r\n  \"properties\": {\r\n    \"VIN\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"Role\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"removed\": {\r\n      \"type\": \"boolean\"\r\n    }\r\n  }\r\n}",
+      "mappings": null
+    },
+    {
+      "name": "Group1 Relationship",
+      "parentSchemaId": "Group1",
+      "childSchemaId": "Group2",
+      "relationId": null,
+      "schemaType": 6,
+      "schema": "{\r\n  \"type\": \"object\",\r\n  \"properties\": {\r\n    \"Id\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"role\": {\r\n      \"type\": \"string\"\r\n    },\r\n    \"removed\": {\r\n      \"type\": \"boolean\"\r\n    }\r\n  }\r\n}",
+      "mappings": null
+    }
+  ],
+  "matchingRules": [
+    {
+      "name": "masterDataId",
+      "id": "HG84ywOMEx6DLJ_u2uBFRg",
+      "viewId": "Contextual Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "masterDataId",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": true
+    },
+    {
+      "name": "crmId",
+      "id": "HEVrwmf1NBjn5ZGbg0olaQ",
+      "viewId": "Contextual Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "crmId",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": true
+    },
+    {
+      "name": "ciamId",
+      "id": "HEuz2sAFOo18Li761LsNXQ",
+      "viewId": "Contextual Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "ciamId",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": true
+    },
+    {
+      "name": "primaryEmail",
+      "id": "HOdtteF7oPsw_p5cggRJoA",
+      "viewId": "Contextual Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "primaryEmail",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "primaryPhone",
+      "id": "HONWHPMzdwGHv87DbZJX8w",
+      "viewId": "Contextual Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "primaryPhone",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "masterDataId",
+      "id": "HHA1PoCjKHKY5o882eByZg",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "masterDataId",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": true
+    },
+    {
+      "name": "crmId",
+      "id": "HK262gSqLnCdWe0Z1vNiUA",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "crmId",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": true
+    },
+    {
+      "name": "ciamId",
+      "id": "HL4IJFQzeqwVNYzbVnRNDw",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "ciamId",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": true
+    },
+    {
+      "name": "primaryEmail",
+      "id": "HHXtb9WC9EUPh6HlDRHLuw",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "primaryEmail",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "primaryPhone",
+      "id": "HLihJji2sV3C5-IT3fOybg",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "primaryPhone",
+      "ucpResolutionPolicy": "keepAll",
+      "isProtected": false
+    },
+    {
+      "name": "cookieID",
+      "id": "HNXN7EhhF0OzBnhmmeJd7Q",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "cookieID",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "emails",
+      "id": "HGEJLzPpXneZrALPLleD0A",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "emails",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "firstName",
+      "id": "HCZfZ7Wl09HQQ_VLfaEjsg",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "firstName",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "familyRole",
+      "id": "HHMv503ymlsGbW6ov1Yb_w",
+      "viewId": "Unified Customer Profile",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Profile",
+      "applicationId": null,
+      "attributeName": "familyRole",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    }
+  ],
+  "groupMatchingRules": [
+    {
+      "name": "id",
+      "id": "HHiwC4oESpc2yFDaz37NzQ",
+      "schemaId": "HKeMYe3g6zIAKN1chRrlSw",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Family",
+      "applicationId": null,
+      "attributeName": "id",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "accountID",
+      "id": "HKyoTMW66bhMP6PZ6dWdsA",
+      "schemaId": "HHSniUlCMnwSAftJqq_8lA",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Vehicle",
+      "applicationId": null,
+      "attributeName": "accountID",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "accountID",
+      "id": "HEQtwVBE-yEe7HjUMNXoog",
+      "schemaId": "HFiv_y9MuAjj1K2YMCr4Aw",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Group1",
+      "applicationId": null,
+      "attributeName": "accountID",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    },
+    {
+      "name": "accountID",
+      "id": "HNgaqZgcvV8mt0JfPBu3qw",
+      "schemaId": "HE6ojb-iwyuXcvocChhhmA",
+      "businessUnitId": "4_4Kawd-ZR0L_e_7ZdIRDSNQ",
+      "schemaName": "Group2",
+      "applicationId": null,
+      "attributeName": "accountID",
+      "ucpResolutionPolicy": "Merge",
+      "isProtected": false
+    }
+  ],
+  "outboundPurposes": [
+    {
+      "name": "DetermineCustomerValue",
+      "description": "",
+      "reason": "Consent",
+      "id": "HLLHMNX_C11AlHUOXvW21A",
+      "updated": "2022-07-27T01:42:06.181915Z",
+      "created": "2022-06-22T10:34:43.1339714Z",
+      "externalId": "DetermineCustomerValue123",
+      "customerAttributes": [
+        "firstName",
+        "lastName",
+        "primaryEmail",
+        "primaryPhone",
+        "imageURL",
+        "masterDataId",
+        "crmId",
+        "deviceId",
+        "ciamId",
+        "emails",
+        "phones",
+        "insuranceProvider",
+        "coverageLimit",
+        "EmailOptIn",
+        "familyID",
+        "familyRole",
+        "cookieID",
+        "dob"
+      ],
+      "customerActivities": {
+        "Orders": [
+          "currency",
+          "amount",
+          "tax",
+          "id",
+          "amountSaved",
+          "productCategory",
+          "productCategory2",
+          "productID",
+          "productDescr",
+          "quantity",
+          "brand",
+          "orderDate"
+        ],
+        "WebSurfingActivity": [
+          "id",
+          "productCategory",
+          "brand",
+          "productcategory1",
+          "product",
+          "productDescription"
+        ],
+        "Maintenance Service Order": [
+          "id",
+          "currency",
+          "VIN",
+          "milometerReading",
+          "createdDate",
+          "totalCost",
+          "hasCoverage",
+          "amountPaidByCustomer"
+        ]
+      },
+      "customerRelationships": {
+        "Family Relationship": [
+          "familyID",
+          "role",
+          "removed"
+        ],
+        "Vehicle Relationship": [
+          "VIN",
+          "Role",
+          "removed"
+        ]
+      },
+      "customerSegments": [
+        "CoverageLimit",
+        "CustomerVal",
+        "Insurer",
+        "CarIntrestSegment"
+      ],
+      "customerActivityIndicators": [
+        "Total Orders",
+        "Total Spend",
+        "NumHighValBrandPur",
+        "LastOrder",
+        "Total WebSurfingActivity",
+        "NumSUVSurfing",
+        "Total Maintenance Service Order",
+        "TotalServiceCost"
+      ],
+      "schemaPurposesData": {
+        "Family": {
+          "schemaAttributes": [
+            "accountName",
+            "accountID",
+            "id"
+          ],
+          "schemaSegments": [],
+          "schemaActivityIndicators": [
+            "Total Orders",
+            "Total Spend",
+            "NumHighValBrandPur",
+            "LastOrder",
+            "Total WebSurfingActivity",
+            "NumSUVSurfing",
+            "Total Maintenance Service Order",
+            "TotalServiceCost"
+          ],
+          "schemaCalculatedIndicators": [],
+          "schemaPredictiveIndicators": [],
+          "schemaRelationships": {}
+        },
+        "Vehicle": {
+          "schemaAttributes": [
+            "accountName",
+            "accountID",
+            "purchaseDate",
+            "model",
+            "lastMilometerReading",
+            "milometerUnit"
+          ],
+          "schemaSegments": [
+            "MaintenaceCost"
+          ],
+          "schemaActivityIndicators": [
+            "Total Orders",
+            "Total Spend",
+            "NumHighValBrandPur",
+            "LastOrder",
+            "Total WebSurfingActivity",
+            "NumSUVSurfing",
+            "Total Maintenance Service Order",
+            "TotalServiceCost"
+          ],
+          "schemaCalculatedIndicators": [],
+          "schemaPredictiveIndicators": [],
+          "schemaRelationships": {}
+        }
+      },
+      "customerCalculatedIndicators": [],
+      "customerPredictiveIndicators": []
+    },
+    {
+      "name": "EmailConsentForMarketingPurpose",
+      "reason": "Consent",
+      "id": "HMIkW_hn2WbRKAXaPNnXvQ",
+      "updated": "2022-07-01T14:07:35.7931237Z",
+      "created": "2022-07-01T14:06:05.0872499Z",
+      "externalId": "A123567",
+      "customerAttributes": [
+        "firstName",
+        "lastName",
+        "primaryEmail",
+        "primaryPhone"
+      ],
+      "customerActivities": {
+        "Orders": [],
+        "WebSurfingActivity": [],
+        "Maintenance Service Order": []
+      },
+      "customerRelationships": {},
+      "customerSegments": [],
+      "customerActivityIndicators": [],
+      "schemaPurposesData": {
+        "Family": {
+          "schemaAttributes": [],
+          "schemaSegments": [],
+          "schemaActivityIndicators": [],
+          "schemaCalculatedIndicators": [],
+          "schemaPredictiveIndicators": [],
+          "schemaRelationships": {}
+        },
+        "Vehicle": {
+          "schemaAttributes": [],
+          "schemaSegments": [],
+          "schemaActivityIndicators": [],
+          "schemaCalculatedIndicators": [],
+          "schemaPredictiveIndicators": [],
+          "schemaRelationships": {}
+        }
+      },
+      "customerCalculatedIndicators": [],
+      "customerPredictiveIndicators": []
+    }
+  ],
+  "name": "testpackagesource",
+  "description": "development"
+}
